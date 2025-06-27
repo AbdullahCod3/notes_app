@@ -7,7 +7,9 @@ import 'package:notes_app/views/widgets/edit_note_view.dart';
 
 class NotesItem extends StatelessWidget {
   const NotesItem({super.key, required this.note});
+
   final NoteModel note;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -16,7 +18,7 @@ class NotesItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return const EditNoteView();
+              return EditNoteView(note: note);
             },
           ),
         );
